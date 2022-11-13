@@ -1,0 +1,49 @@
+input{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 20rem;
+    border-radius: 10px;
+    outline: none;
+    /* border-top: none; */
+}
+
+#submit{
+    background-color: blue;
+    width: 21rem;
+}
+
+label{
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    font-size: large;
+}
+
+select{
+    margin-left: 6rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+#form{
+    background-color: aquamarine;
+    width: 30rem;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+#table{
+    background-color: coral;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 0.5rem;
+}
+
+ th ,td, tr {
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+    border-radius: 10px;
+    padding: 0.5rem;
+}

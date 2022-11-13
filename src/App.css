@@ -1,0 +1,8 @@
+.button{
+    background-color: coral;
+    border: none;
+    padding: 0.3rem;
+    /* margin-top: 0.5rem; */
+    cursor: pointer;
+}
+

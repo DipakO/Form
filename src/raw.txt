@@ -1,0 +1,129 @@
+import { useState } from "react";
+import "./App.css";
+import "./index.css"
+// import Form from "./index.jsx";
+// import Box from "./Box";
+const App = () => {
+    const [FullName,setName] = useState("") 
+    const [email,setEmail] = useState("") 
+    const [Password,setPassword] = useState("")
+    const [State,setState] = useState("")
+    const [Gender,setGender] = useState("")
+
+    function handleClick(event){
+        event.preventDefault(); //stop reloading
+        // js way
+        // console.log(e.target[0].value)
+        // console.log(e.target[1].value)
+
+        //Using react way
+        console.log(FullName)
+        console.log(email)
+        console.log(Password)
+        console.log(State)
+        console.log(Gender)
+        alert("Resistration Succesfully")
+    }
+    return(
+      
+        <div >
+            <h1>Welcome , Register Below</h1>
+            <form onSubmit={(event)=>handleClick(event)}>
+            <label id="username"> UserName :</label> <input type="text" placeholder="enter your name" required
+            onChange={(e)=>setName(e.target.value)}
+            /> <br />
+            <label> Enter Your Email :</label> <input type="email" placeholder="enter your email"
+            onChange={(e)=>setEmail(e.target.value)}
+            /> <br />
+            <label id="password"> Enter Password :</label> <input type="password" 
+            onChange={(e)=>setPassword(e.target.value)}
+            /> <br />
+
+            <label> Select State:</label> <select name="State" id="states"
+            onChange={(e)=>setState(e.target.value)}
+            >
+                <option value="Maharashtra" placeholder="Select-Your-State"> Maharashtra</option>
+                <option value="Goa"> Goa</option>
+            </select><br />
+
+            <label id="gender"> Gender :</label> <input id="radio" type="radio" name="gender" value="Male" 
+            onChange={(e)=>setGender(e.target.value)}
+            />Male
+            <input type="radio" name="gender" value="Male" />FeMale <br />
+            <input id="submit" type="submit"  />
+            </form>
+            <hr></hr>
+            <h1> Full Name : {FullName}</h1>
+            <h1> Your Email Id : {email}</h1>
+            <h1> Your password Is : {Password}</h1>
+            <h1> Your State Is : {State}</h1>
+            <h1> Your Gender Is : {Gender}</h1>
+            {/* <Form /> */}
+        </div>
+    )
+}
+
+export default App;
+
+import { useState } from "react";
+const Form = ()=>{
+    const [fullname, setName] = useState("") 
+    function handleClick(e){
+        e.preventDefault();
+        // console.log(fullname)
+
+    }
+    return(
+        <div>
+            <form onSubmit={(event)=>handleClick(event)}>
+                <input type="text" placeholder="Enter your name"
+                onChange={(e)=> setName(e.target.value)}
+                />
+                <input type="email" placeholder="Enter your email"/>
+                <input type="password" placeholder="Enter your password"/>
+                <input type="submit" />
+            </form>
+            <hr />
+            <h3>Full Name : {fullname}</h3>
+        </div>
+    )
+}
+
+export default Form;
+
+import { useState } from "react"
+
+
+const Form = () => {
+    const [firstName,setFirstName] = useState("") 
+    const [lastName,setLastName] = useState("") 
+    const [number,setNumber] = useState("")
+    const [date,setDate] = useState("")
+    const [State,setState] = useState("")
+    
+  return (
+    <div>
+        <form>
+            <input onChange={(e)=>setFirstName(e.target.value) } type="text" placeholder='Enter Your Name'/> <br />
+            <input type="text" onChange={(e)=>setLastName(e.target.value)} placeholder='Enter The Country Name'/><br />
+            <input onChange={(e)=>setNumber(e.target.value)} type="number" placeholder='Enter the Mobile number'/><br />
+            <input onChange={(e)=>setDate(e.target.value)} type="date" /><br />
+            <label> Select State:</label> <select name="State" id="states"
+            onChange={(e)=>setState(e.target.value)}
+            >
+                <option value="Maharashtra" placeholder="Select-Your-State"> Maharashtra</option>
+                <option value="Goa"> Goa</option>
+            </select><br />
+            <input type="submit" value="Submit" />
+        </form>
+
+        <h1>{firstName} {lastName}</h1>
+        {/* <h1>{firstName}</h1> */}
+        <h1>{number}</h1>
+        <h1>{date}</h1>
+        <h1>{State}</h1>
+    </div>
+  )
+}
+
+export default Form
